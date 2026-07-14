@@ -8,6 +8,15 @@
 - **Prompt Suno 的方式**：描述①风格/氛围②节奏③情绪④用途，如 `warm minimal lo-fi background music, gentle, hopeful, for a talking-head short video, instrumental, no vocals`。
 - **时长/循环**：做够整支视频长度，或选一段可无缝循环的。
 
+## 操作步骤（suno.com）
+1. 注册登录 **suno.com**（有免费额度）。
+2. 建歌切到 **Instrumental / 纯音乐**模式（关人声），或在描述里写 `instrumental, no vocals`。
+3. 写描述（Style/Prompt）＝ **风格 + 氛围 + 节奏 + 用途**，例：`warm minimal lo-fi background music, gentle, hopeful, for a talking-head short video, instrumental, no vocals, soft piano`。
+4. 生成 → 试听（每次给 2 版可挑）→ 不对就改描述重生成。
+5. 下载 MP3/WAV → ffmpeg 垫到拼好的视频底轨、**音量压低**别盖台词：
+   `ffmpeg -i video.mp4 -i music.mp3 -filter_complex "[1:a]volume=0.25[m];[0:a][m]amix=inputs=2:duration=first" out.mp4`
+6. 版权：Suno 生成的可商用发社媒。
+
 ## 在系统里的位置
 - 视频脚本标准里，「AI 音乐」是 6 工具之一——台词/画面里会提到「配上有质感的背景乐」。
 - 生成的音乐在**后期剪辑**时垫到拼好的完整视频下面（跟中文字幕一起，后期加）。
