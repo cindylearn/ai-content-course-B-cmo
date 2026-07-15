@@ -92,7 +92,10 @@ description: >-
 
 ### 第 0 关 · 账号 + 装好（一次过，之后每个 Session 都不用再装）
 > 先跟她讲清楚：**东西是一次过装好的，不是每节装。** 之后每个 Session 只是"用"，不再装任何东西。
-- 缺哪个账号 → 给注册链接（Notion notion.so 免费 / Higgsfield higgsfield.ai / Suno suno.com / GitHub github.com 免费），让她注册 + 连 connector。
+- 缺哪个账号 → 给注册链接，让她注册 + 连 connector：
+  - 🔴 **要付费订阅**：**Claude**（claude.ai · **US$19/月**）· **Higgsfield**（higgsfield.ai · **US$20/月**）——合计约 **US$39/月**，这两个是真正动手用的引擎，**别说成免费**。
+  - ✅ **免费**：Notion（notion.so · 免费版够）· Suno（suno.com · 免费版可起步）· GitHub（github.com）。
+  - 💡 她嫌贵/犹豫 → **先上课学方法和系统，课后再订阅来练习**，一样能学；别逼她当场买。
 - skill 包她已在用 = 已装好；memory 里没品牌资料 → 下一关补。
 - 一次把 5 账号 + connector 弄好 → 之后不再碰安装。
 
@@ -161,17 +164,20 @@ description: >-
 
 ## 0. 要先 connect 什么（前置连接 — 最重要）
 
-**实际工具栈（全部 free / 可负担，学员照这个连就行）：**
+**实际工具栈（🔴 2 个要付费订阅，其余免费 —— 学员照这个连就行）：**
 
-| 角色 | 工具 | 用途 |
-|------|------|------|
-| 🧠 **内容大脑** | **Notion（免费版够用）** | 一张数据库表存/查/批改所有内容页 |
-| 🤖 **编排大脑** | **Claude（Claude Code）** | 写文案、读写数据库、批量生产、多 agent 编排——把 6 个 skill 串起来的那只手 |
-| 🎨 **生成引擎（图+视频）** | **Higgsfield** | 出海报图（nano_banana）、出口播视频（seedance，含数字人/影片） |
-| 🎵 **音乐** | **Suno** | 视频背景乐（AI 音乐 skill） |
-| 🗂️ **版本记录 / 交付** | **GitHub** | 存 skill + SOP + template，做版本记录、跨设备/给学员 |
-| 🛠️ **本地小工具** | **Python + Pillow(PIL) + imageio_ffmpeg** | 合成 logo（顶部 header 带）、拼接视频完整版 |
-| 🗄️ *(可选)* 成品归档 | Google Drive（`rclone`） | 成品图/视频分文件夹存档（要跟团队共享才需要） |
+| 角色 | 工具 | 价格 | 用途 |
+|------|------|------|------|
+| 🤖 **编排大脑** | **Claude（Claude Code）** | 🔴 **US$19/月 · 需订阅** | 写文案、读写数据库、批量生产、多 agent 编排——把 6 个 skill 串起来的那只手 |
+| 🎨 **生成引擎（图+视频）** | **Higgsfield** | 🔴 **US$20/月 · 需订阅** | 出海报图（nano_banana）、出口播视频（seedance，含数字人/影片） |
+| 🧠 **内容大脑** | **Notion** | ✅ 免费版够用 | 一张数据库表存/查/批改所有内容页 |
+| 🎵 **音乐** | **Suno** | ✅ 免费版可起步 | 视频背景乐（AI 音乐 skill） |
+| 🗂️ **版本记录 / 交付** | **GitHub** | ✅ 免费 | 存 skill + SOP + template，做版本记录、跨设备/给学员 |
+| 🛠️ **本地小工具** | **Python + Pillow(PIL) + imageio_ffmpeg** | ✅ 免费 | 合成 logo（顶部 header 带）、拼接视频完整版 |
+| 🗄️ *(可选)* 成品归档 | Google Drive（`rclone`） | ✅ 免费 | 成品图/视频分文件夹存档（要跟团队共享才需要） |
+
+> 🔴 **别把这套说成「全部免费」**——真正动手的两个引擎 **Claude + Higgsfield 合计约 US$39/月**，学员必须先知道。
+> 💡 **减压话术**（跟销售口径一致）：课前订阅好 → 当天能一路跟着做、带走自己的成品；**不想先订阅也完全可以** —— 先来上课学方法和系统，**课后再订阅来练习**。
 
 **Notion 两种接法（二选一）：**
 - **A. 官方 Notion connector**（在 Claude/claude.ai 里授权）——干净、稳，适合日常读写。**学员建议用这个。**
