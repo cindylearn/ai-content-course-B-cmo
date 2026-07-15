@@ -158,7 +158,7 @@ description: >-
 - **先做通 1 条再放量**（One before many）。
 - 她每次纠正 → 记进**她自己的** memory / SOP，下次不再犯。
 
-> 详细「装什么/连什么/喂什么」见 `03-SETUP-详细清单-装连喂.md`；每步的 SUMA 例子 prompt 见 `05-对话会怎么走-Claude带你搭.md`；每个工具怎么用见 `tools/`；协作方法论见 `06-FRAMEWORK-如何指挥AI搭系统.md`。
+> 详细「装什么/连什么/喂什么」见 `03-SETUP-详细清单-装连喂.md`；每步的 SUMA 例子 prompt 见 `05-对话会怎么走-Claude带你搭.md`；每个工具怎么用见 `启动包/`（7 大启动包）；协作方法论见 `06-FRAMEWORK-如何指挥AI搭系统.md`。
 
 ---
 
@@ -321,7 +321,7 @@ ai-content-factory/
 ├── 08-NLP营销技巧-让文案更有说服力.md   ← 12 个 NLP 说服技巧（写文案时叠上去）
 ├── 09-6大人性需求-内容角度更有方向.md   ← 6 大人性需求：内容角度没方向时用它切
 ├── 交付物-doc-pdf-ppt/               ← 课程手册 PDF · 幻灯片 PDF · Word 工作手册
-└── tools/                          ← 6 个 AI 工具各自的 skill
+└── 启动包/                        ← 🎁 LP 承诺的 7 大启动包（每个技能一个 folder）
     ├── 01-ai-copywriting.md   (AI文案 · Claude)
     ├── 02-ai-image.md         (AI图像 · Higgsfield)
     ├── 03-ai-avatar.md        (AI数字人 · Seedance)

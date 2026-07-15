@@ -82,7 +82,7 @@
 ## AI 剪片（字幕 / 配乐 / 音效 —— 不用 CapCut 也能做不少）
 生成 + 拼接之后的剪辑，Claude + ffmpeg 现在就能做：
 - **上字幕（自动）**：台词和 TTS 时间我们本来就有 → Claude 按时间生成 `.srt`/`.ass`（带样式：字体/描边/位置），ffmpeg 烧进画面：`ffmpeg -i v.mp4 -vf "subtitles=sub.ass" out.mp4`。**不用手动 CapCut 打字。**
-- **配乐**：Suno 背景乐 ffmpeg 垫底轨、音量压低（见 `tools/05`）。
+- **配乐**：Suno 背景乐 ffmpeg 垫底轨、音量压低（见 `启动包/07-《AI品牌配乐》启动包`）。
 - **音效**：在时间点混 SFX（转场声/点击声）→ ffmpeg `adelay` + `amix`。
 - **基础特效/转场**：淡入淡出、缩放推拉、文字动画（ffmpeg `fade` / `zoompan` / `drawtext`）。
 - 🔴 **复杂特效/花哨转场**（花字、贴纸、节奏卡点）→ 用下面的 **HyperFrames**，或剪映/CapCut。
