@@ -15,7 +15,7 @@
 | **记忆系统（auto-memory）** | 把品牌/SOP/规矩写成 memory，Claude **每次开工先读**——这是「地基」的载体 | ✅ 必须 |
 | **`ai-content-factory`**（本 skill 包） | 系统总图 + 生产线 + 协作框架 + 6 工具 skill + 交互教练 | ✅ 必须 |
 | **`suma-copywriting`**（文案 skill） | 按品牌语气/分层框架写文案 | ✅ 强烈建议 |
-| **`script-to-video-prompt`** | 脚本 →（9宫格选角锁人物）→ 每分镜 video prompt。<br>📄 `7大AI启动包/03-《AI口播短视频》启动包/VIDEO-PROMPT-SKILL.md`（**规则以同目录 README 为准**） | ✅ 视频要用 |
+| **`script-to-video-prompt`** | 脚本 →（9宫格选角锁人物）→ 每分镜 video prompt。<br>📄 `7大AI启动包/04-《AI口播短视频》启动包/VIDEO-PROMPT-SKILL.md`（**规则以同目录 README 为准**） | ✅ 视频要用 |
 | **`docx` / `artifact-design`** | 要输出 Word 手册 / 网页教材时用 | 选用 |
 | general-skills repo 里的营销 skill（SEO/落地页/邮件…） | 按需扩展 | 选用 |
 

@@ -8,9 +8,9 @@
 | 以前 | 现在 |
 |---|---|
 | — （内容散在 SKILL.md 第1关 / 03-SETUP / 07-TEMPLATE / 09） | `7大AI启动包/01-《AI品牌定位》启动包/README.md` 🆕 |
-| `tools/02-ai-image.md` | `7大AI启动包/02-《AI产品图》启动包/README.md` |
-| `tools/06-ai-video.md` | `7大AI启动包/03-《AI口播短视频》启动包/README.md` |
-| `tools/01-ai-copywriting.md` | `7大AI启动包/04-《AI爆款文案》启动包/README.md` |
+| `tools/02-ai-image.md` | `7大AI启动包/03-《AI产品图》启动包/README.md` |
+| `tools/06-ai-video.md` | `7大AI启动包/04-《AI口播短视频》启动包/README.md` |
+| `tools/01-ai-copywriting.md` | `7大AI启动包/02-《AI爆款文案》启动包/README.md` |
 | `tools/03-ai-avatar.md` | `7大AI启动包/05-《AI数字分身》启动包/README.md` |
 | `tools/04-ai-ppt.md` | `7大AI启动包/06-《AI销售PPT》启动包/README.md` |
 | `tools/05-ai-music.md` | `7大AI启动包/07-《AI品牌配乐》启动包/README.md` |
