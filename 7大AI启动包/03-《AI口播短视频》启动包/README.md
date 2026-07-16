@@ -8,12 +8,75 @@
 
 ## 流水线
 ```
-分镜脚本(进表) → 锁人物(多张脸参考) → seedance 逐镜生成 → 抽帧验证 → 拼接完整版
+分镜脚本(进表) → 【没真人？先选人】→ 锁人物(脸参考) → seedance 逐镜生成
+              → 抽帧验证 → 拼接完整版 → 后期剪辑(字幕/音效/BGM)
 ```
 1. **分镜脚本进表格**（一 shot 一 row）：镜号/类型 · Prompt · 台词 · 平台。整支约 60–100s。列宽示例 199 / 562 / 290 / 120（Prompt 列最宽）。
-2. **锁人物（口播镜）**：用 **3 张真人脸参考图**（正脸+不同角度更稳）当 `image_references`，每个真人镜 prompt **重复完整 persona 描述** → 全片同一个人。
-3. **逐镜生成**：`seedance_2_0` · `9:16` · 每镜 4–15s。
-4. **验证 + 拼接**：抽帧检查（无 ffmpeg 用 `imageio_ffmpeg`）→ 统一参数 → concat 完整版。
+2. **选人**——**只在没有真人出镜时做**。见下面 §0。有真人（老板/讲师本尊）直接跳到第 3 步。
+3. **锁人物（口播镜）**：用 **3 张脸参考图**（正脸+不同角度更稳）当 `image_references`，每个真人镜 prompt **重复完整 persona 描述** → 全片同一个人。
+4. **逐镜生成**：`seedance_2_0` · `9:16` · 每镜 4–15s。
+5. **验证 + 拼接**：抽帧检查（无 ffmpeg 用 `imageio_ffmpeg`）→ 统一参数 → concat 完整版。
+6. **后期剪辑**：字幕 / 花字 / 音效 / BGM → 见「AI 剪片」段 + 本包两份配套文档。
+
+---
+
+## §0. 人物从哪来（没有真人的时候）
+
+第 3 步要「3 张脸参考图」——**但如果你没有真人可拍，那张脸从哪来？** 这一节答的就是这个。
+
+> 🔴 **两步，中间必须停下来等你选。** 别让 AI 一口气跑完——脸没锁死，后面每一镜都会跑样，整支重做。
+
+### 0a. 九宫格选人（一张图，9 个不同的人）
+
+让 Claude 直接生成（`generate_image`，1:1 正方）：
+
+```
+A single square 1:1 casting board arranged as a clean 3x3 grid of 9 passport-style
+headshots of 9 DIFFERENT [目标市场] [men/women], all [age range] with a [vibe] look.
+IMPORTANT: each of the 9 is a DIFFERENT individual with a DIFFERENT face — different
+face shape, eyes, nose, eyebrows, lips, jawline, skin tone and hairstyle. They must
+NOT look like the same person; do not reuse one face with different hair. Every cell:
+head-and-shoulders, front-facing, neutral friendly expression, pure white background,
+even soft lighting, consistent framing. Place a small clean number (1 to 9) in the
+TOP-LEFT corner of each cell.
+<真实感条款>
+The 9 people:
+1 — [脸1：脸型/眼/鼻/眉/唇/肤色/发型]
+2 — [脸2：…]   3 — […]   4 — […]   5 — […]   6 — […]   7 — […]   8 — […]   9 — […]
+```
+
+- 🔴 **9 个不同的人，不是同一张脸换 9 个发型**——这是最容易出错的一条。**先把五官写死再写头发**，模型才不会偷懒。
+- 🔴 **9 张脸的清单要写出来给你看**，你才知道几号是谁。
+- ⏸️ **停。等你回一个号码（1–9）。** 只能选 1 个。
+
+### 0b. 定妆照锁脸（把那张脸钉死）
+
+拿到号码后，**把九宫格原图当参考图一起送回去**，prompt 里**点名号码**——这才是锁脸的关键：
+
+```
+Using the attached 3x3 casting grid image as reference, recreate the EXACT same person
+shown in CELL NUMBER [N] (the headshot labelled "[N]" in its top-left corner). Keep that
+person's identity unchanged — same face shape, eyes, nose, eyebrows, lips, jawline, skin
+tone and hairstyle as cell [N]; do not blend with the other faces.
+[把 [N] 号那张脸的五官原样重述一遍] [气质] [服装]. Pure white background, front-facing,
+neutral friendly expression, head-and-shoulders framing.
+<真实感条款>
+```
+
+- 🔴 **不点名号码 = 模型会把 9 张脸糊在一起**，出来是个「平均脸」，跟你选的那个不是同一个人。
+- 建议再出**不同角度各一张**（正脸 + 侧一点 + 微笑）→ 正好凑够第 3 步要的 **3 张脸参考图**。
+
+### 0c. 真实感条款（0a / 0b / 每一镜都要带）
+
+```
+candid photo shot on a real camera (50mm, f/2.8), natural realistic skin texture with
+visible pores, fine lines and subtle imperfections, natural facial asymmetry, true-to-life
+natural lighting, slight film grain, documentary realism, looks like a real unretouched
+photo of a real person, NOT AI-generated, no CGI, no 3D render, no plastic or
+over-smoothed skin, no waxy look, no airbrushing, no over-saturation, no perfect symmetry.
+```
+
+漏了它 → 出来就是一眼假的「AI 脸」：皮肤打蜡、五官完美对称、没毛孔。**这条跟 §2「照片级真人」是同一场仗的两条战线**：§0 管那张**脸**不假，§2 管那个**人**会动。
 
 ---
 
@@ -93,12 +156,15 @@
 | **剪映 / CapCut** | ❌ **草稿加密**，AI 程序化剪不了（只能手动或 UI 自动化，慢且脆）|
 | **Gemini Omni** | ❌ 实测不稳，中文字幕烧不干净 |
 
-### 📄 两份配套文档（在本包同目录）
+### 📄 三份配套文档（在本包同目录）
 
 | 文档 | 是什么 | 什么时候看 |
 |---|---|---|
-| **`SOP-AI自动剪辑.md`** | **通用方法论** —— 五层模型 · 14 条规则 · **教练式提问脚本** · 全行业适配表 | **先看这份**。换工具、换行业都成立 |
-| **`CHATCUT-SKILL.md`** | **ChatCut 说明书** —— 全库存清单（音效35/转场13/特效9/推近4/MG 210）+ 14 个坑 | 动手时查 |
+| **`VIDEO-PROMPT-SKILL.md`** | **前段 skill（出片）** —— 引导流程：读 script → 问方向 → 九宫格选人 → 逐镜 prompt | 有 script 要开拍时。**它只管流程，规则以本 README 为准** |
+| **`SOP-AI自动剪辑.md`** | **通用方法论** —— 五层模型 · 14 条规则 · **教练式提问脚本** · 全行业适配表 | **剪之前先看这份**。换工具、换行业都成立 |
+| **`CHATCUT-SKILL.md`** | **后段 skill（剪片）** —— ChatCut 说明书：全库存清单（音效35/转场13/特效9/推近4/MG 210）+ 14 个坑 | 动手剪时查 |
+
+> **一条生产线两段：`VIDEO-PROMPT-SKILL`（出片）→ `CHATCUT-SKILL`（剪片）。** 两份 skill 都只写流程，**硬规则单一源头在本 README** —— 改一处全对。
 
 ### 🔴 五条最容易赔钱的（详见 SOP）
 

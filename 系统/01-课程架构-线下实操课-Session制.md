@@ -69,9 +69,9 @@ Session 0  喂地基（Feed · 原始资料库 + 八二法则）
 
 ### Session 3 · AI 影片
 - 🎯 目标：做出一支完整短视频（先分：个人IP·数字人口播 / 产品·服务广告）。
-- 📦 skill：Higgsfield（Seedance）· `script-to-video-prompt`
+- 📦 skill：Higgsfield（Seedance）· `script-to-video-prompt`（出片）· `chatcut-editing`（剪片）
 - 📖 md：`7大AI启动包/03-《AI口播短视频》启动包`
-- 🛠️ 动手：8 分镜脚本 → 锁人物 → 逐镜生成(先 1 镜验证 480p) → 配乐 → 拼接。
+- 🛠️ 动手：8 分镜脚本 → **选人(九宫格→定妆照)** → 锁人物 → 逐镜生成(先 1 镜验证 480p) → 配乐 → 拼接 → **剪辑(字幕/花字/音效/BGM)**。
 - 🎁 交付：**1 支完整短视频**。
 
 ### Session 4 · AI 数字人
