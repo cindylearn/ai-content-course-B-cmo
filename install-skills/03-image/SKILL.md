@@ -30,7 +30,7 @@ metadata:
 > - 🧠 **NLP 说服技巧**（换框 / 未来预演 / 连续肯定 / 锚定 / 社会认同…）= 语言的说服力 —— 每条内容至少叠 1–2 个。
 > 🔴 **两套的完整全文，就在本 skill 最下方「📚 完整参考资料」里**（`09-6大人性需求…` + `08-NLP营销技巧…`）—— 动手前先读，做完自检：**这条戳了哪个人性需求？用了哪个 NLP 技巧？** 说不出＝没套底层，重来。
 
-> 🚦🔴🔴 **开工前先看 Status（每个 skill、每一步都守）：** 动任何一条内容前，先读它在 Notion「内容矩阵」里的 `Status` —— **Status 决定这一步该做什么**：Need Review Idea→先审角度别产出 · Checked→可产出 · 待拍→去生成 · 已产出→归档 · 已发→看数据（详见本 skill 下方模版「🚦 Status 工作流」）。🔴 **绝不不看 Status 就闷头产**；做完这一步**改 Status** 推进到下一状态。
+> 🚦🔴🔴 **开工前先看 Status（每个 skill、每一步都守）：** 动任何一条内容前，先读它在 Notion「内容矩阵」里的 `Status` —— **Status 决定这一步该做什么**：Not Started→定角度立项 · Need Review Idea→审角度 · Checked→产出文案/prompt · Proceed to Generate→去生成(生成前先确认) · Need Review Poster/Video→审成品+三落归档 · Need Modify→按反馈改 · Rejected→弃用 · Posted→已发看数据（详见本 skill 下方模版「🚦 Status 工作流」）。🔴 **绝不不看 Status 就闷头产**；做完这一步**改 Status** 推进到下一状态。
 
 > 🔴🔴 **前置闸门（先查再做，缺了就挡）：**
 > 1. **connector 连好没？** 🔴 **Notion + Google Drive + GitHub 必连**（Notion 建大脑、Drive 存成品、GitHub 装 skill）；出图/视频还要 Higgsfield、剪片要 ChatCut。缺 → 让她去 Claude 设置 → Connectors 连，或回 `suma-ai-00-setup`。🔴 **还要她的 Google Drive folder 链接**（成品同步存这），没有先要。
@@ -49,7 +49,7 @@ metadata:
 > **③ 传进 Drive：** Drive connector 传大图不行（base64 太大），但 **rclone 直传就行、多大都可以**（00 已帮学员配好 `gdrive` remote）。命令：`rclone copy "<本地成品>" gdrive: --drive-root-folder-id <Drive成品folder的ID>`（folder ID = Drive 链接 `/folders/` 后那段）。rclone 没配 → 先带学员配一次（见 `suma-ai-00-setup`），别跳过、别甩给用户手动。
 
 > 🔴🔴 **强制：先看 Status → 照模版立项（单独跑这个 skill 也一样，绝不跳过）：** 动手写 / 生成**之前**：
-> ① 🚦 **先读这条内容的 `Status`，Status 决定这一步做什么** —— Need Review Idea→先审角度别产出 · Checked→可产出 · 待拍→去生成 · 已产出→归档 · 已发→看数据（详见下方模版「🚦 Status 工作流」）。**别不看 Status 就闷头做。**
+> ① 🚦 **先读这条内容的 `Status`，Status 决定这一步做什么** —— Not Started→定角度 · Need Review Idea→审角度 · Checked→产出文案/prompt · Proceed to Generate→去生成 · Need Review Poster/Video→审成品+归档 · Need Modify→改 · Rejected→弃 · Posted→已发看数据（详见下方模版「🚦 Status 工作流」）。**别不看 Status 就闷头做。**
 > ② 在 Notion「内容矩阵」database **New / 打开这条立项页**，正文**照 `05-Notion内容矩阵页模版` 填**（按媒体类型选对应结构：概念 / 文案 / 图内文字层级 / prompt 表 / 台词…）。
 > ③ 产出完**回填**（文案进「文案」列、成品图贴「成品」块）＋ **改 Status**（推进到下一状态）。
 > 🔴 **绝不**：不看 Status 闷头做、不建页就直接产出、建空白页、内容散在对话里。**每一条内容 ＝ 内容矩阵一行 ＋ 照模版填好的立项页**。🔴 没有「内容矩阵」database？先回 `suma-ai-00-setup` 建。模版全文见下方「底层必读」。
@@ -253,17 +253,20 @@ metadata:
 
 ## 🚦 Status 工作流（🔴 Status 决定这一步该做什么 —— 开工前先看它）
 
-> 🔴🔴 **动任何一条内容前，先读它的 `Status`；Status 决定这一步做什么，别不看 Status 就闷头产出。**
+> 🔴🔴 **动任何一条内容前，先读它的 `Status`；Status 决定这一步做什么，别不看 Status 就闷头产出。做完这一步就把 Status 推进到下一状态。**
 
 | Status | 含义 | 🔴 这一步该做什么 |
 |---|---|---|
-| **Need Review Idea** | 还只是点子，角度没审 | 先定/审角度（Hook ＋ ❤️人性需求 ＋ 🧠NLP），**别急着产出**；审好 → 改成 `Checked` |
-| **Checked** | 角度已审、可以做 | 开始产出：写文案 / 出图 prompt / 写脚本（照对应 skill 规则）；做好 → 改成 `待拍` 或 `已产出` |
-| **待拍** | 文案 / prompt 就绪，等生成 | 去生成图 / 视频 / 数字人（🔴 生成前先 proceed 确认再烧 credit）；出了成品 → `已产出` |
-| **已产出** | 成品出来了 | **成品三落归档**（本地 + Notion「成品」块 + Drive）；排期 → 发布后改 `已发` |
-| **已发** | 已发布 | 收工，回看数据表现，好的角度复用 |
+| **Not Started** | 还没开始（刚开的空行）| 定这条的角度方向、照模版把立项页填起来 → 角度写好改 `Need Review Idea` |
+| **Need Review Idea** | 角度点子待审 | 审角度（Hook ＋ ❤️人性需求 ＋ 🧠NLP 对不对、贴不贴业务）；过 → `Checked`，不行 → `Need Modify` 或 `Rejected` |
+| **Checked** | 角度已审通过 | 开始产出文案 / 图 prompt / 脚本（照对应 skill 规则）→ 就绪可生成 → `Proceed to Generate` |
+| **Proceed to Generate** | 就绪，可以生成 | 🔴 去生成图 / 视频 / 数字人（**生成前先把 prompt ＋ 预计 credit 给用户确认再烧**）→ 出了成品 → `Need Review Poster/Video` |
+| **Need Review Poster/Video** | 成品出来了，待审 | 审成品（渲染对不对、乱码 / 外国脸 / 合规）；过 → **成品三落归档**（本地 ＋ Notion ＋ Drive）＋ 排期 → `Posted`；要改 → `Need Modify` |
+| **Need Modify** | 角度 / 成品要改 | 按反馈改（文案 / prompt / 重生成）→ 改好回到对应待审状态 |
+| **Rejected** | 这条弃用 | 不再产出，留着当记录 / 教训 |
+| **Posted** | 已发布 | 回看数据表现，好的角度复用 |
 
-> 🔴 Status 值可按你业务自己的工作流扩 / 改，但**「先看 Status、Status 决定做什么、做完改 Status」这条铁律不变**。
+> 🔴 这 8 个 Status 是标准工作流值（可按业务微调），但**「先看 Status、Status 决定做什么、做完改 Status」这条铁律不变**。
 
 ---
 
@@ -275,7 +278,7 @@ metadata:
 | 栏位 | 类型 | 说明 / 示例值 |
 |---|---|---|
 | **广告投放日期** | Date | 可空 |
-| **Status** | Select | Need Review Idea / Checked / 待拍 / 已产出 / 已发 …（工作流状态） |
+| **Status** | Select | Not Started / Need Review Idea / Checked / Proceed to Generate / Need Review Poster/Video / Need Modify / Rejected / Posted（工作流状态，见上方 🚦 Status 工作流）|
 | **Stage** | Select | ToFu / MoFu / BoFu |
 | **目标受众** | Select | 按用户受众（例：内容创作者_In-house Marketer / Freelance Marketer） |
 | **领域** | Select | 按用户领域（例：数字营销） |

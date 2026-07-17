@@ -9,17 +9,20 @@
 
 ## 🚦 Status 工作流（🔴 Status 决定这一步该做什么 —— 开工前先看它）
 
-> 🔴🔴 **动任何一条内容前，先读它的 `Status`；Status 决定这一步做什么，别不看 Status 就闷头产出。**
+> 🔴🔴 **动任何一条内容前，先读它的 `Status`；Status 决定这一步做什么，别不看 Status 就闷头产出。做完这一步就把 Status 推进到下一状态。**
 
 | Status | 含义 | 🔴 这一步该做什么 |
 |---|---|---|
-| **Need Review Idea** | 还只是点子，角度没审 | 先定/审角度（Hook ＋ ❤️人性需求 ＋ 🧠NLP），**别急着产出**；审好 → 改成 `Checked` |
-| **Checked** | 角度已审、可以做 | 开始产出：写文案 / 出图 prompt / 写脚本（照对应 skill 规则）；做好 → 改成 `待拍` 或 `已产出` |
-| **待拍** | 文案 / prompt 就绪，等生成 | 去生成图 / 视频 / 数字人（🔴 生成前先 proceed 确认再烧 credit）；出了成品 → `已产出` |
-| **已产出** | 成品出来了 | **成品三落归档**（本地 + Notion「成品」块 + Drive）；排期 → 发布后改 `已发` |
-| **已发** | 已发布 | 收工，回看数据表现，好的角度复用 |
+| **Not Started** | 还没开始（刚开的空行）| 定这条的角度方向、照模版把立项页填起来 → 角度写好改 `Need Review Idea` |
+| **Need Review Idea** | 角度点子待审 | 审角度（Hook ＋ ❤️人性需求 ＋ 🧠NLP 对不对、贴不贴业务）；过 → `Checked`，不行 → `Need Modify` 或 `Rejected` |
+| **Checked** | 角度已审通过 | 开始产出文案 / 图 prompt / 脚本（照对应 skill 规则）→ 就绪可生成 → `Proceed to Generate` |
+| **Proceed to Generate** | 就绪，可以生成 | 🔴 去生成图 / 视频 / 数字人（**生成前先把 prompt ＋ 预计 credit 给用户确认再烧**）→ 出了成品 → `Need Review Poster/Video` |
+| **Need Review Poster/Video** | 成品出来了，待审 | 审成品（渲染对不对、乱码 / 外国脸 / 合规）；过 → **成品三落归档**（本地 ＋ Notion ＋ Drive）＋ 排期 → `Posted`；要改 → `Need Modify` |
+| **Need Modify** | 角度 / 成品要改 | 按反馈改（文案 / prompt / 重生成）→ 改好回到对应待审状态 |
+| **Rejected** | 这条弃用 | 不再产出，留着当记录 / 教训 |
+| **Posted** | 已发布 | 回看数据表现，好的角度复用 |
 
-> 🔴 Status 值可按你业务自己的工作流扩 / 改，但**「先看 Status、Status 决定做什么、做完改 Status」这条铁律不变**。
+> 🔴 这 8 个 Status 是标准工作流值（可按业务微调），但**「先看 Status、Status 决定做什么、做完改 Status」这条铁律不变**。
 
 ---
 
@@ -31,7 +34,7 @@
 | 栏位 | 类型 | 说明 / 示例值 |
 |---|---|---|
 | **广告投放日期** | Date | 可空 |
-| **Status** | Select | Need Review Idea / Checked / 待拍 / 已产出 / 已发 …（工作流状态） |
+| **Status** | Select | Not Started / Need Review Idea / Checked / Proceed to Generate / Need Review Poster/Video / Need Modify / Rejected / Posted（工作流状态，见上方 🚦 Status 工作流）|
 | **Stage** | Select | ToFu / MoFu / BoFu |
 | **目标受众** | Select | 按用户受众（例：内容创作者_In-house Marketer / Freelance Marketer） |
 | **领域** | Select | 按用户领域（例：数字营销） |

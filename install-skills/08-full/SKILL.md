@@ -288,7 +288,7 @@ description: >-
 > ⭐ **人性需求** 和 **NLP手法** 是"方向列"：每条内容立项时先标——戳哪个人性需求（见 `09`）、用哪个 NLP 手法（见 `08`），产出的角度和文案就有方向、不空转。
 
 **状态就是流水线（Status 字段驱动一切）：**
-`Need Review Idea`（想法待审）→ `Proceed to Generate`（批准生产）→ `Need Review Poster/Video`（成品待审）→ `Checked`（定稿）→ `Posted`（已发）。
+`Not Started`（未开始）→ `Need Review Idea`（角度待审）→ `Checked`（角度/文案已审）→ `Proceed to Generate`（可以生成）→ `Need Review Poster/Video`（成品待审+三落归档）→ `Posted`（已发）；旁支：`Need Modify`（要改，改完回上一个待审）· `Rejected`（弃用）。
 > 只有标了 `Proceed to Generate` 才去花钱生产 —— 这是省钱和防跑偏的闸门。
 
 **为什么用数据库不用文件夹：** 可**枚举**（一次拉全部页）、可**批量**（脚本改上百页）、可**追踪**（状态看进度）、**单一真相源**。
