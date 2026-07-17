@@ -135,7 +135,7 @@ description: >-
 > 我们从**地基**开始。你先回我这三个（一次回一个就行）：
 > 1️⃣ **你的生意 / 品牌是做什么的？** 一句话就好。
 >   （例：SUMA 是「教人用 AI 做营销内容的课程」。）
-> 2️⃣ **这 6 个账号你有了吗？** Claude ✅ / Notion / Higgsfield / ChatCut / Suno / GitHub。缺哪个我给你注册链接。
+> 2️⃣ **这 7 个账号你有了吗？** Claude ✅ / Notion / Higgsfield / ChatCut / Suno / GitHub / **Google Drive**。缺哪个我给你注册链接。🔴 其中 **Notion · Higgsfield · ChatCut · Google Drive 还要在 Claude 里连 connector**；连好 Google Drive 后**给我你要存成品的 folder 链接**（之后成品自动同步存这）。
 > 3️⃣ **有品牌 logo（浅底 + 深底）和品牌色吗？**
 >   （例：SUMA 品牌色是 #28c2e7 青 / #0f75bc 蓝 / #fcb040 橙。）
 >
@@ -155,7 +155,8 @@ description: >-
     - **GitHub**（github.com）—— 🔴 **一定要用 email + 密码注册，别用「Sign in with Google」那种第三方登入**：GitHub 对第三方登入很敏感，**用 Google 登入常常开不到账号**，email + 密码最稳。
   - 💡 她嫌贵/犹豫 → **先上课学方法和系统，课后再订阅来练习**，一样能学；别逼她当场买。
 - skill 包她已在用 = 已装好；memory 里没品牌资料 → 下一关补。
-- 一次把 6 账号 + connector 弄好 → 之后不再碰安装。
+- 一次把 7 账号 + connector 弄好（🔴 **Notion · Higgsfield · ChatCut · Google Drive 必连**）→ 之后不再碰安装。
+- 🔴 **要她的 Google Drive folder 链接**（成品之后自动同步存这，如 `drive.google.com/…/folders/xxx`），记进 memory。
 
 ### 第 1 关 · 品牌地基（一次问一个，帮她定，写进 memory）
 > 每问一个，都给 **SUMA 的填法**当范例，她照着填自己的就好。
