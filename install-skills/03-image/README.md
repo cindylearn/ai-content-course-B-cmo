@@ -9,6 +9,8 @@
 
 > 两种效果一样：斜杠直接点名；First Prompt 打一句话，Claude 认关键词自己进。打不中就用斜杠。触发后一题一题问你。
 
+> 🔴 **前置（跟 SKILL.md 一致，缺了先回 `suma-ai-00-setup`）：Notion + Google Drive connector 必连**（少了 Claude 建不了大脑、存不了成品）· 地基 + Notion 骨架先搭好 · 要好 Google Drive folder 链接（成品同步存这）。
+
 
 > 🔴 **交互铁律（跟 SKILL.md 一致，这一包的任何一步都守）：问用户任何选择题 —— 一题一题问、一题一张可点选项卡（`AskUserQuestion`，每题最多 3–4 个选项，系统自动加「其他」）、**绝不一次全倒**。只有开放题（品牌名 / 具体挑刺 / 参考链接）才让他打字。**
 
