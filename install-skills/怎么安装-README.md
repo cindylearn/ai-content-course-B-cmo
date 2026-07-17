@@ -15,11 +15,11 @@
 | 00 | 00-setup | `/suma-ai-00-setup` | 帮我从零开始搭我自己的 AI 内容营销系统 |
 | 01 | 01-branding | `/suma-ai-01-branding` | 帮我定品牌定位、受众、红线 |
 | 02 | 02-copy | `/suma-ai-02-copy` | 帮我写广告文案 |
-| 03 | 03-image | `/suma-ai-03-image` | 帮我出海报 / 产品图 |
+| 03 | 03-image | `/suma-ai-03-image` | 帮我出海报／产品图 |
 | 04 | 04-video | `/suma-ai-04-video` | 帮我做口播短视频 |
 | 05 | 05-avatar | `/suma-ai-05-avatar` | 帮我做一个数字人主播 |
-| 06 | 06-ppt | `/suma-ai-06-ppt` | 帮我做卖点 PPT / 汇报 |
-| 07 | 07-music | `/suma-ai-07-music` | 帮我做配乐 / BGM |
+| 06 | 06-ppt | `/suma-ai-06-ppt` | 帮我做卖点 PPT |
+| 07 | 07-music | `/suma-ai-07-music` | 帮我做配乐／BGM |
 | 08 | 08-full | `/suma-ai-08-full` | 帮我搭整套系统，全程一步步带我 |
 
 > **两种方式效果一样**：斜杠 = 直接点名；First Prompt = 打一句话，Claude 认出关键词自己进。
