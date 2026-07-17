@@ -35,13 +35,47 @@ metadata:
 
 > 🔴🔴 **动手前必做（第 0 件事）：先用 `Read` 把本文件夹里的每一个 `.md` 文件读一遍**（框架 / NLP / SOP / 模版 —— 完整规则在那里），读进来再开工。**别只看这份 SKILL.md 就动手 = 出烂成品。**
 
-照 `MUSIC-SKILL`（Suno 操作流程）。收尾**必存 Notion 音乐库**（标能不能用 / 版权）。
-🔴🔴 **BGM prompt 五个成分（少一个就靠运气 —— 完整见 README）：**
-1. **用途 + 格式**（`short-form vertical ad`，否则给你写整首歌）
-2. **具体乐器**（`muted electronic pulse` `plucked synth arpeggio`…，别写 lo-fi/chill 含糊词）
-3. **调性含否定**（`professional, not hype or cheesy` —— 说不要什么一样重要）
-4. 🔴 **给人声让路**（`no vocals` + `no melody competing with speech` + **`low-mid frequencies scooped for voice clarity`**）—— 最容易漏最要命，是**频率打架**不是音量，生成时就挖掉人声频段
-5. **BPM + 时长**（`100 BPM, 85 seconds`）
+## 第一刀：先分两条路（分错整首白做）
+- **① 垫底 BGM（无人声）** —— 垫口播/广告底下，目标「消失」不抢戏。**先做这个**，视频线天天用。
+- **② 品牌歌 / jingle（有歌词有唱）** —— 能记住的主题曲，目标「被记住」。见文末。
+🔴 BGM 混人声会跟口播打架；品牌歌没歌词就不是歌。定方向再往下。
+
+## ① BGM 一句话原则：抢戏就是失败
+视频已有一个主角（讲话的人）。选 BGM 的唯一标准不是「好不好听」，是「**有没有让讲话更好听**」。
+
+## Suno 的 Discover 是 prompt 图书馆，不是选歌的
+🔴 每首公开歌点 **「+ Show full styles」看到作者完整 prompt 原文** —— 逛 Discover 只偷**写法**，不抄歌（音轨是别人的）。🔴 **标签骗人、完整 prompt 不骗人**（列表只显示 `cinematic pop`，点开才看到 `stadium drums / soaring choral / bold vocals`）。🔴 **别拿 Discover 的歌直接当 BGM**（那池全有人声、会打架）；让用户贴「Show full styles」原文给你。
+
+## 「我要这首」→ 能用的 BGM：留 / 扔 / 加（翻译不是照抄）
+- **留**：cinematic / orchestral（弦乐铜管）/ 力量感 / 现代感 —— 他真正要的「感觉」。
+- **扔**：人声 / 合唱 / 一开场就炸 / 体育场鼓 / euphoric —— 全抢戏，写死砍掉。
+- **加**：无人声 / 给人声让路 / BPM / 时长 —— 原歌没有，BGM 必补。
+把「爆」换「稳」（`held back` / `restrained not euphoric`），人声合唱写死砍掉，再加给人声让路。
+
+## 🔴 BGM prompt 五个成分（少一个就靠运气）
+1. **用途 + 格式**（例 `short-form vertical ad`）—— 漏了它给你写一首完整的歌。
+2. **具体乐器**（例 `muted electronic pulse, plucked synth arpeggio, subtle four-on-the-floor kick, light hi-hats`）—— 写「lo-fi/chill」含糊词每次都不一样。
+3. **调性（含否定）**（例 `professional and confident, not hype or cheesy`）—— 🔴 说不要什么跟说要什么一样重要。
+4. **给人声让路**（例 `no vocals` + `no melody that competes with speech` + `low-mid frequencies scooped for voice clarity`）—— 🔴 **最容易漏、最要命。** 是**频率打架**不是音量，生成时就挖掉人声频段，比事后压音量有效得多。
+5. **BPM + 时长**（例 `steady 100 BPM, builds gently, 85 seconds`）。
+
+## suno.com 操作步骤（免费可做）
+① 注册登录 suno.com。② 进 Create → 左上把 **`Simple` 切 `Advanced`**（才分出 Lyrics/Styles 两栏）。③ Styles 栏贴风格（BGM 用五成分）；Lyrics 栏 BGM 留空。④ 🔴 **模型选 `v4.5-all`（"Best free model"）**——v5.5/v5/v4.5+/v4 全是 Pro，选了弹付费墙。⑤ Instrumental：BGM 开、品牌歌 关。⑥ 点 Create → 🔴 **会弹 Google 人机验证，必须用户真人点**（机器过不去，所以"全自动出歌"不存在）。⑦ 出 2 首完整版。⑧ 🔴 **试听挑一首——只有用户能做，AI 没耳朵**；不对让他说哪里不对（太吵/开头炸/咬字糊/抢戏）→ 改 prompt → 重生。🔴 **核心分工：你写 prompt，用户当耳朵。**
+
+## 🔴 垫进视频：用「自动闪避」别手动压音量
+下载后别用 ffmpeg 硬压，进剪辑软件靠轨道角色自动让路：人声轨=anchor、BGM 轨=follower（讲话时音乐自动缩、不讲回来）。三个坑：① 🔴 **别压两次**（开了闪避就别再手动压，音乐直接没了）② 声音不对**先查 muted 再查音量** ③ 🔴 **人声常在视频轨内嵌音频**，闪避角色要挂真正有人声那轨。（例：SUMA 84 秒竖版广告，BGM `-1.4dB` + follower `-19dB`。）
+
+## ② 品牌歌 / jingle（规则跟 BGM 全相反）
+- **要人声**（Instrumental 关），副歌洗脑能哼。**歌词=文案**：套品牌核心信息，找一句 5 字内钩子反复砸。
+- **Discover 这时才真有参考价值**（那池就是歌）。
+- 🔴 Suno 唱中文易咬字糊 —— 全中文 style 写死 `crystal-clear diction, every word intelligible`；糊了改中英混（副歌走英文）重生。
+- 🔴 **别自吹**：品牌自唱「我多好」= 自夸，改唱「我们看见你的难」（客户是英雄）。🔴 **别拿品牌歌当 BGM 垫口播**；短 jingle（5–15 秒）只用片头/片尾 logo 露出。
+
+## 🔴 收尾必存 Notion 音乐库（别跳）
+Suno 一次给好几首，不归档 = 下次找不到、又重生花额度。**Notion 建一张表，每首一行**：**标题**（歌名+版本时长，如「…（v4.5·完整·1:54）」）· **类型**（垫底BGM/品牌歌jingle）· **链接**（Suno song URL/下载文件）· **用途**（广告片/片头尾/某产品线）· **参考曲**（抄了哪首写法）· **状态**（草稿/可用/待改）· **备注**。🔴 **每首标清能不能用**：免费 `v4.5-all` 完整版听 OK → 「可用」；v5.5 预览（1 分钟片段、要 Pro）→ 「待改」别误当成品发。用户没这表就帮他建。
+
+## 版权
+🔴 **Suno 生成的=你自己的**，可商用（免费方案条款自己确认一次）；🔴 **Discover 上别人的歌=别人的**，抄写法可以、拿音轨不行。
 
 ---
 
