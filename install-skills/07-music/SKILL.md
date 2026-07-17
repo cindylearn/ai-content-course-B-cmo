@@ -32,7 +32,13 @@ metadata:
 
 ---
 
-照 `MUSIC-SKILL`（流程）+ `README`（规则）；收尾必存 Notion 音乐库。
+照 `MUSIC-SKILL`（Suno 操作流程）。收尾**必存 Notion 音乐库**（标能不能用 / 版权）。
+🔴🔴 **BGM prompt 五个成分（少一个就靠运气 —— 完整见 README）：**
+1. **用途 + 格式**（`short-form vertical ad`，否则给你写整首歌）
+2. **具体乐器**（`muted electronic pulse` `plucked synth arpeggio`…，别写 lo-fi/chill 含糊词）
+3. **调性含否定**（`professional, not hype or cheesy` —— 说不要什么一样重要）
+4. 🔴 **给人声让路**（`no vocals` + `no melody competing with speech` + **`low-mid frequencies scooped for voice clarity`**）—— 最容易漏最要命，是**频率打架**不是音量，生成时就挖掉人声频段
+5. **BPM + 时长**（`100 BPM, 85 seconds`）
 
 ---
 

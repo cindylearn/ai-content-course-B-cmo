@@ -32,7 +32,16 @@ metadata:
 
 ---
 
-照 `README.md` 出图；先用选项卡让用户选海报风格；场景/文字要戳人性需求。
+先用选项卡让用户**选海报风格**（5 种：A战报证明 / B悬浮UI / C导师权威 / D游戏化慎用 / E扁平色块保底 —— 🔴 同批别全用同一种）。场景/文字要戳人性需求。
+🔴🔴 **出图 prompt 硬规则（写死，漏了必出问题 —— 完整见 README「通用海报硬规则」+「踩坑」）：**
+- 比例统一 **3:4 竖版**，`photoreal documentary real-camera, NOT AI, 本地感`；人物**一律本地人** + 贴行业气质（美妆老板娘=年轻好皮肤，不要 aunty）。
+- 🔴 **色号绝不贴着文字写**（`#28C2E7 '字'` 会把色号印进图）→ 颜色用**词**描述，hex 只结尾单列 + 注「绝不渲染成文字」；**别写字体规格**（`60px` 会印进图）。
+- 🔴 **只渲染引号里的中文**；屏幕内容 `abstract blurred colour blocks, NO legible text` + 加死 `NO garbled text`（防乱码假 UI）。
+- 🔴 **logo 别让 AI 画**（会出假 logo）→ 右上/顶部留空 + `do NOT render the word 'LOGO'`，真 logo 后期 PIL 合成。
+- 🔴 **人物用真人脸参考锁定**（`face MUST match the reference exactly`），别生陌生脸。
+- 🔴 **ToFu 不放价格、不 overpromise**（价格=BoFu 专属）；ToFu 用温和时间型大字（如「1 天」）。
+- 🔴 **对比图写** `full-bleed, NOT 印刷海报立街边/白框`（否则画「海报中的海报」）。
+- 🔴 **生成后一定 Read 图人工审**：色号泄漏 / 乱码 / 外国脸 / 撞 logo。
 
 ---
 

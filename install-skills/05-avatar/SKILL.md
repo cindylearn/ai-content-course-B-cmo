@@ -32,7 +32,12 @@ metadata:
 
 ---
 
-🔴 同样要 Notion 有脚本才能生成视频。照 `README.md` 做。
+🔴 生成视频前置：Notion 要有脚本。**Q1 二选一**：九宫格数字人（**声画一起** `generate_audio=true`）/ 自己样子的数字人（真人照片 + 语音样本克隆声 → **声音分开**，全系统唯一要拆的情况）。九宫格模板 05 自带（选人 → 定妆照锁脸，**prompt 点名号码防平均脸**）。
+🔴🔴 **prompt 硬规则（完整见 README）：**
+- **照片级真人**：`PHOTOREAL, REALISTIC HUMAN presenter, a real-looking [本地] person, NOT a cartoon, NOT a 3D avatar`（漏了出卡通/塑料脸）。
+- **人物一律本地** + 贴行业气质；参考图**具体到特征**（脸型/眼镜/衣着/痣），换镜不换人。
+- 屏幕里的主播也**不要乱码字**。
+- 一张 9:16 人物参考图当每镜 `image_references` → 全片同一个人。
 
 ---
 
