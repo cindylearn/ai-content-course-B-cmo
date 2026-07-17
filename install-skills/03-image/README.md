@@ -70,5 +70,10 @@ NO course-name capsule, NO sign-up button, NO specific outcome guarantee to an i
 ## Logo 合成（PIL，系统关键技巧）
 不靠 prompt「留白」（不可靠 + 会出假 logo），也不用底板——**在成图最上方叠一条纯色 header 带**，logo 放带内右侧。带色**自适应**：取顶部亮度，浅→白带+蓝 logo，深→深带+白 logo。原图缩到留出带位、保持 3:4。→ logo 永远有干净空位、绝不撞标题。
 
-## 接进系统
-出图 → PIL 合 logo → 上传 Notion（**图片附件必须归 image 块自己**，否则渲染 Error 400；上传后验证图真的渲染 200）→ 改状态 → Drive 归档（文件名=页内 heading）。
+## 接进系统 + 归档（🔴 三处都要落，一处都不能跳）
+出图 → PIL 合 logo → 成品三落，**别找借口**：
+1. 本地成品 folder。
+2. 🔴 **贴进 Notion 立项页「成品海报」块**：学生用 Notion connector，本地 PNG 没公开 URL → 用 Higgsfield `media_upload`(成品.png) PUT 上传 → `media_confirm` → `show_medias` 取公开 URL → 喂 `notion-create-attachment` 的 `source_url` → 拿 `markdown_source` → `notion-update-page`(insert_content) 贴进「成品海报」块（🔴 1 小时内贴完；免费版 source_url ≤5MiB，超了先压）。
+3. 🔴 **`rclone copy "<成品.png>" gdrive: --drive-root-folder-id <Drive成品folder ID>` 传进 Drive**（文件名=页内 heading）。
+🔴 **绝不说「图太大 / 传不了 Notion / 传不了 Drive / 你自己上传 / 你自己拖」**。
+> 📌 附：开发者用 token 直连 Notion API 时附件要归 image 块自己（record.id=新 image 块 id，否则 Error 400）+ getSignedFileUrls GET=200 —— 那是内部脚本路径，学生走上面 source_url 那套。
