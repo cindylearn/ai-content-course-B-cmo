@@ -578,6 +578,7 @@ metadata:
 > Spoken in natural Malaysian Chinese (Mandarin, local accent, clean — no filler particles). Saying: "[这一 shot 的台词全文]"
 > ```
 > 🔴 **B-roll shot**（讲工具/数据/成果）：人物换成对应**空镜**（screen recording of a dashboard、产品特写、打包桌近景…），但 CHARACTER 以外的固定条款（9:16 · 无字幕 · REAL LIVING/运镜 · 清晰不虚不乱码）**照样整段重写**，别一直怼人头。
+> 🔴🔴 **B-roll 也有台词、也有声音 —— 台词绝不中断**：8 shot 的台词是**一整段连贯口播**，B-roll 只换画面、**声音不能停**。prompt 照写 `Saying: "[这一 shot 的台词]"`，并加一句 **`VOICEOVER narration over the b-roll — NO person speaking on camera in this shot`**（画面无人说话、旁白继续讲）。🔴 **绝不把 B-roll 做成静音空档**；模型旁白不行也要后期（ChatCut）补上旁白，不许留哑段。
 > 🔴🔴 **禁 shortcut**：`同上` / `same as above` / `only change` 一律不行。**每个 shot 的 prompt 都是完整一大段。**
 
 | 画面构图 | Higgsfield Prompt（含图内文字与排版规格）| 台词 | 适用平台 | 🎯涉及的USP（独特卖点）|
@@ -680,7 +681,8 @@ metadata:
 🔴🔴 **每一镜 prompt 的硬规则（写死，漏了必出问题 —— 完整见 README「硬规则」段）：**
 - **无字幕护栏（必带）**：`ABSOLUTELY NO on-screen text, NO subtitles, NO captions, NO burned-in words…`（字幕后期加）。
 - **AI 人 = 照片级真人**：`PHOTOREAL, REALISTIC HUMAN … NOT a cartoon, NOT a 3D avatar` + 会眨眼眼珠动（`BLINKS… EYES alive…`）+ **真实感条款**（`candid photo… visible pores… NOT AI-generated…`）。🔴 **这条只管 AI 人；选了「卡通人」→ 不套照片级真人，按选定的卡通风格出。**
-- **B-roll = 无脸真实近景**（`generate_audio=false`）+ **快切** `FAST-PACED… HARD CUTS every ~1.2–1.5s`。
+- 🔴🔴 **B-roll 也要台词、也要声音（台词绝不中断）**：8 个 shot 的台词是**一整段连贯口播**，B-roll 只是换画面，**声音不能停**。做法：`generate_audio=true` + 照写 `Saying: "[这一 shot 的台词]"`，prompt 里写成 **VOICEOVER**（`VOICEOVER narration over the b-roll — NO person speaking on camera in this shot`）＝ 画面是无脸空镜、但旁白继续讲。🔴 **绝不 `generate_audio=false` 把 B-roll 做成静音空档**；万一模型旁白效果差，也必须在 ChatCut 后期把那段旁白补上，**不许留哑段**。
+- **B-roll 画面 = 无脸真实近景** + **快切** `FAST-PACED… HARD CUTS every ~1.2–1.5s`。
 - **prompt 绝不写 hex 色号 / 文字标签**（会烤成乱码）→ 写方向词 + `NO letters, NO numbers, NO words`。
 - **背景虚化无可读文字** `background softly out of focus, NO readable text`。
 - 🔴🔴 **省 credit 铁律：一律 480p + `mode fast`，绝不 720p / std**（480p-fast ≈ 720p-std 的 1/3 credit，一支 8 镜差很多）。配合上面「先出 Shot 1 满意才批量」，把冤枉钱挡在第一镜。

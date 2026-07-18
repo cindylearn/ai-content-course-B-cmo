@@ -578,6 +578,7 @@ metadata:
 > Spoken in natural Malaysian Chinese (Mandarin, local accent, clean — no filler particles). Saying: "[这一 shot 的台词全文]"
 > ```
 > 🔴 **B-roll shot**（讲工具/数据/成果）：人物换成对应**空镜**（screen recording of a dashboard、产品特写、打包桌近景…），但 CHARACTER 以外的固定条款（9:16 · 无字幕 · REAL LIVING/运镜 · 清晰不虚不乱码）**照样整段重写**，别一直怼人头。
+> 🔴🔴 **B-roll 也有台词、也有声音 —— 台词绝不中断**：8 shot 的台词是**一整段连贯口播**，B-roll 只换画面、**声音不能停**。prompt 照写 `Saying: "[这一 shot 的台词]"`，并加一句 **`VOICEOVER narration over the b-roll — NO person speaking on camera in this shot`**（画面无人说话、旁白继续讲）。🔴 **绝不把 B-roll 做成静音空档**；模型旁白不行也要后期（ChatCut）补上旁白，不许留哑段。
 > 🔴🔴 **禁 shortcut**：`同上` / `same as above` / `only change` 一律不行。**每个 shot 的 prompt 都是完整一大段。**
 
 | 画面构图 | Higgsfield Prompt（含图内文字与排版规格）| 台词 | 适用平台 | 🎯涉及的USP（独特卖点）|
