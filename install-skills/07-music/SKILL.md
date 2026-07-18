@@ -601,9 +601,25 @@ metadata:
 **## 表格：画面构图 | Higgsfield Prompt | 文案**
 🔴 **`Higgsfield Prompt` 列宽 ≈ 562px**（跟视频表同一标准列宽）。
 
+> 🔴🔴 **每张图的出图 prompt = 照下面这个黄金模板逐行填（这才是标准长度，不是一句话）。硬锁 vertical 3:4，固定条款一字不动，只换 `[中括号]` 里的行业/受众专属部分：**
+>
+> ```
+> vertical 3:4 BOLD promo-style poster, Style [A 战报证明风 —— 按受众从 5 种风格挑，见 03]: chunky 3D-extruded/embossed outlined Chinese headline (thick black outline, [品牌色] gradient fill) + a solid colour-block banner strip + an icon-checklist feature list + a real photo grounding credibility.
+> TOP: small kicker pill naming the audience: '[受众一句话，如 在公司做 Marketing 的你]'.
+> Big chunky 3D-extruded outlined headline (the PAIN/contrast opener): '[痛点/反差主标题，如 同岗位，产能却差十倍]'.
+> Below headline: a solid [品牌深色] colour-block banner strip containing bold white/yellow text stating the NAMED SOLUTION + a concrete moderate outcome: '[方案+温和成果，如 1 天学会…，一人顶一队]'.
+> MIDDLE: real photo (photoreal, authentic documentary-style candid photo, NOT a cutout) of [主角：young local Malaysian Chinese …贴受众气质、NOT auntie] [真实场景+道具+情绪/动作，如 standing at her desk in bright daylight, calm and confident, one hand on laptop showing finished deliverables, glancing at the wall clock as she packs up on time] — a single candid photo, NOT a split screen.
+> Below the photo: an icon-checklist row, [N] small colourful circular icon badges with checkmarks and tiny labels: '✅[卖点]' … , small clean single row, must NOT dominate the poster.
+> [可选·合规才放] A tiny price-hint line near the bottom: '[如 从 RMxxx 起]'.
+> NO course-name capsule, NO sign-up button, NO specific outcome guarantee to an individual (no '保证/包你/一定能'). Keep top-right corner truly empty for a logo — do NOT render the word 'LOGO' or any placeholder. Any phone/screen content in the photo must be blurred abstract colour blocks with NO legible text/characters at all.
+> 🔴 CRITICAL: render NO English words/letters anywhere; the ONLY rendered text is the Chinese specified above, proofread character-by-character, no typos, no repeated/duplicated text blocks, no garbled characters, the person is a real local Malaysian (photoreal, not cartoon/CGI).
+> ```
+> 🔴 **一字不动的固定条款**：vertical 3:4 · 结构(pill→3D描边大标题→色块横幅=方案+温和成果→中段真人纪实照 NOT cutout/NOT split → icon 打勾清单 → 起价小字[合规才放] → 右上留 logo 位不写'LOGO') · 手机/屏幕内容 blurred abstract 无可读字 · 整段 CRITICAL(NO English/逐字校对/no garbled/真人本地非卡通)。
+> 🔴 **只换**：`[风格]` / `[受众 pill]` / `[痛点标题]` / `[方案+成果]` / `[主角外形+场景+动作]` / `[卖点清单]` / `[起价]`。🔴 引号里就是要渲染进图的中文（对应「图内文字层级」），**绝不写 `no text overlay`**（那是视频规则，海报要字）。
+
 | 画面构图 | Higgsfield Prompt（含图内文字与排版规格）| 文案 |
 |---|---|---|
-| `<一句画面描述>` | `<纯英文出图 prompt：3:4 + 场景 + 🔴 **把上面「图内文字层级」的中文大字放引号里让 Higgsfield 渲染进图**（headline/pill/横幅/清单）+ 真实感 + logo位 + 护栏「只渲染引号中文·NO garbled」。🔴 **绝不写 no text overlay**（那是视频规则，海报要字！），规则见 03>` | `<🔴 完整文案：照 02「§四 节拍表」填满每一拍（ToFu/MoFu 9 拍 · BoFu 6 拍）· **卖自己产品/服务，AI 全程隐形** · 字数达标（ToFu≥250 / MoFu≥300 / BoFu≥200 字）· 分段（每拍空行）+ 适当 emoji（3–6 个）· NLP 按漏斗层挑 + 戳 ❤️人性需求 · 参照 02「§五 示范」· + hashtags —— 绝不缩成 2 句 caption>` |
+| `<一句画面描述>` | `<照上方黄金模板填：vertical 3:4、固定条款一字不动，只换 [风格]/[受众pill]/[痛点标题]/[方案+成果]/[主角+场景]/[卖点清单]/[起价]>` | `<🔴 完整文案：照 02「§四 节拍表」填满每一拍（ToFu/MoFu 9 拍 · BoFu 6 拍）· **卖自己产品/服务，AI 全程隐形** · 字数达标（ToFu≥250 / MoFu≥300 / BoFu≥200 字）· 分段（每拍空行）+ 适当 emoji（3–6 个）· NLP 按漏斗层挑 + 戳 ❤️人性需求 · 参照 02「§五 示范」· + hashtags —— 绝不缩成 2 句 caption>` |
 
 > 🔴 **`文案` = 这张图配的发帖 caption**（跟视频页「概念 → 📱视频社媒文案」对应）。图内的字在「图内文字层级」，发帖的字在这列，别混。
 
